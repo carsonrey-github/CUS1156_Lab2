@@ -11,15 +11,21 @@ public class UniqueWords
    {
 	  int count = 0;
 	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < i; j++)
+	      for (int i = 0; i < list.size(); i++)
+	      {		 
+		 for (int j = 0; j < i; j++)
 		 {
-			if (list.get(i) == list.get(j))
-			{
-				uniqueness = 0;
-			}
+		       if (list.get(i) == list.get(j))
+		       {
+			     uniqueness = 0;
+		       }
 		 }
-      }
+		 if (uniqueness == 1)
+		 {
+			count++;
+		 }
+	      }
+	   
 	  return count;
    }
 
